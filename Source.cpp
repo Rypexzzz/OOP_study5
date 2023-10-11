@@ -11,10 +11,10 @@ public:
 	virtual double square() const = 0;
 	virtual BoundingBoxDimensions dimensions() const = 0;
 	virtual std::string type() const = 0;
-	void printParams(Shape* shape) {
-		std::cout << "Type: " << shape->type() << std::endl;
-		std::cout << "Square: " << shape->square() << std::endl;
-		std::cout << "Dimensions: " << shape->dimensions().lenght << " " << shape->dimensions().width << std::endl;
+	void printParams() {
+		std::cout << "Type: " << this->type() << std::endl;
+		std::cout << "Square: " << this->square() << std::endl;
+		std::cout << "Dimensions: " << this->dimensions().lenght << " " << this->dimensions().width << std::endl;
 	}
 };
 
@@ -88,7 +88,7 @@ int main() {
 	Triangle t(3, 4, 5);
 	Circle c(3);
 	Rectangle r(4, 5);
-	t.printParams(&t);
-	c.printParams(&c);
-	r.printParams(&r);
+	t.printParams();
+	c.printParams();
+	r.printParams();
 }
